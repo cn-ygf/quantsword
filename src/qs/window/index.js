@@ -11,6 +11,8 @@ const UISysButton = require('./sysbutton/sysbutton').UISysButton
 const UINavigationBar = require('./navigationbar/navigationbar').UINavigationBar
 const UIStateBar = require('./statebar/statebar').UIStateBar
 const UIPanel = require('./panel/panel').UIPanel
+const UIPanelGroupItem = require('./panel/panel').UIPanelGroupItem
+const UIPanelItem = require('./panel/panel').UIPanelItem
 
 /*---------------------------------------------------------------------------------------------
  * 初始化主窗口布局
@@ -67,12 +69,12 @@ function init_title_bar() {
             label: '清屏'
         }]
     }, {
-        label: '工具(T)'
-    }, {
-        label: '选项卡(B)',
+        label: '工具(T)',
         items: [{
             label: '选项 ...'
         }]
+    }, {
+        label: '选项卡(B)'
     }, {
         label: '窗口(W)'
     }, {
@@ -136,7 +138,15 @@ function init_state_bar() {
 // 初始化面板
 function init_panel() {
     var options = {}
+    options.title = 'SHELL管理器'
     panel = new UIPanel(options)
+
+    var allShellGroup = new UIPanelGroupItem({ title: '所有SHELL' })
+    panel.addGroup(allShellGroup)
+
+    panel.addGroup(new UIPanelGroupItem({ title: '测试' }))
+    panel.addGroup(new UIPanelGroupItem({ title: '美国' }))
+
     panel.show()
 }
 

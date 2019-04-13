@@ -12,3 +12,56 @@
     position: absolute;
     z-index: 1;
 }
+
+.panel .title {
+    display: none;
+    height: 35px;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.panel .title h2 {
+    font-size: 11px;
+    cursor: default;
+    font-weight: 400;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+
+.panel .groupitem {
+    height: 22px;
+    line-height: 22px;
+    background-color: rgba(128, 128, 128, 0.2);
+    background-position: 2px;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 20px;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    background-image: url(./noexpand.svg);
+    outline-color: rgba(14, 99, 156, 0.8);
+}
+
+.panel .groupitem h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 11px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+.panel .groupitem.expanded {
+    background-image: url(./expand.svg);
+}
