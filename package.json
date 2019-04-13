@@ -1,0 +1,30 @@
+{
+    "name": "QuantSword",
+    "version": "1.0.1",
+    "main": "src/main.js",
+    "description": "a web server manager",
+    "author": {
+        "name": "YGF",
+        "email": "ygf@cnhonker.com",
+        "github": "https://github.com/cn-ygf"
+    },
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-packager . --out ./build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cn-ygf/quantsword"
+    },
+    "bugs": {
+        "url": "https://github.com/cn-ygf/quantsword/issues"
+    },
+    "devDependencies": {
+        "electron": "2.0.2",
+        "electron-packager": "^13.1.1",
+        "nedb": "^1.6.0"
+    },
+    "dependencies": {
+        "nedb": "^1.6.0"
+    }
+}

@@ -1,0 +1,14 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) YGF. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.statebar {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    cursor: default;
+    font-size: 12px;
+    display: inline-block;
+    z-index: 99;
+}

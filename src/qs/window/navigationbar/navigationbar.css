@@ -1,0 +1,28 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) YGF. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.navigationbar {
+    top: 30px;
+    left: 0px;
+    height: 100%;
+    position: absolute;
+}
+
+.navigationbar .item_bg {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.checked {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.navigationbar .item_bg:hover {
+    background-color: rgb(255, 255, 255);
+}

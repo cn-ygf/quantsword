@@ -1,0 +1,14 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) YGF. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.panel {
+    background-color: rgb(37, 37, 38);
+    width: 300px;
+    height: 100%;
+    top: 30px;
+    left: 50px;
+    position: absolute;
+    z-index: 1;
+}
