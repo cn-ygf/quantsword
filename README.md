@@ -24,7 +24,7 @@ QuantSword
 
 二进制下载
 
-    https://github.com/cn-ygf/quantsword/releases
+* [Release]
 
 
 问题与反馈
@@ -33,6 +33,7 @@ QuantSword
 * [Issue]
 
 [Issue]:     https://github.com/cn-ygf/quantsword/issues?state=open
+[Release]:   https://github.com/cn-ygf/quantsword/releases
 
 
 免责声明
