@@ -20,7 +20,7 @@
         "url": "https://github.com/cn-ygf/quantsword/issues"
     },
     "devDependencies": {
-        "electron": "2.0.2",
+        "electron": "2.0.8",
         "electron-packager": "^13.1.1",
         "nedb": "^1.6.0"
     },
