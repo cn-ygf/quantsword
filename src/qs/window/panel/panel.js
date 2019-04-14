@@ -14,6 +14,11 @@ function UIPanel(options) {
     this.title_div.appendChild(this.title_h2)
     this.main_div.appendChild(this.title_div)
 
+    this.removeAllSelect = function() {
+        for (var i = 0; i < this.group_item_list.length; i++) {
+            this.group_item_list[i].getDom().classList.remove('selected')
+        }
+    }
     this.show = function() {
         document.body.appendChild(this.main_div)
     }
@@ -22,8 +27,10 @@ function UIPanel(options) {
     }
     this.addGroup = function(item) {
         this.main_div.appendChild(item.getDom())
+        item.setParent(this)
         this.group_item_list.push(item)
     }
+
 }
 
 // 分组项
@@ -35,6 +42,9 @@ function UIPanelGroupItem(options) {
     this.main_div.appendChild(this.title_h3)
     this.bexpand = false
     var pthis = this
+    this.setParent = function(p) {
+        pthis.parent = p
+    }
     this.addItem = function(item) {
 
     }
@@ -51,6 +61,8 @@ function UIPanelGroupItem(options) {
     }
     this.expand(true)
     this.main_div.onclick = function() {
+        pthis.parent.removeAllSelect()
+        pthis.main_div.classList.add('selected')
         pthis.expand(!pthis.bexpand)
     }
 }

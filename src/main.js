@@ -6,12 +6,12 @@
 const { app, BrowserWindow } = require('electron')
 const ipc = require('electron').ipcMain
 const dialog = require('electron').dialog
-var Datastore = require('nedb'),
-    path = require('path'),
-    db = new Datastore({
-        filename: path.join(require('electron').app.getPath('userData'), 'quantsword.db'),
-        autoload: true
-    })
+var Datastore = require('nedb')
+var path = require('path')
+var db = new Datastore({
+    filename: path.join(app.getPath('userData'), 'quantsword.db'),
+    autoload: true
+})
 
 // 主窗口对象
 let win
