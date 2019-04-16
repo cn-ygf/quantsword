@@ -1,17 +1,30 @@
 {
     "name": "QuantSword",
     "version": "1.0.1",
-    "main": "src/main.js",
+    "main": "main.js",
     "description": "a web server manager",
+    "DEV": false,
+    "license": "ISC",
     "author": {
         "name": "YGF",
         "email": "ygf@cnhonker.com",
-        "github": "https://github.com/cn-ygf"
+        "github": "https://github.com/cn-ygf/quantsword"
     },
     "scripts": {
-        "start": "electron .",
-        "build": "electron-packager . --out ./build"
+        "start": "react-scripts start",
+        "estart": "electron .",
+        "build": "react-scripts build",
+        "build-prd": "electron-packager . --out ./release"
     },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/cn-ygf/quantsword"
@@ -20,11 +33,15 @@
         "url": "https://github.com/cn-ygf/quantsword/issues"
     },
     "devDependencies": {
-        "electron": "2.0.8",
+        "babel-plugin-import": "^1.11.0",
+        "electron": "^4.1.4",
         "electron-packager": "^13.1.1",
         "nedb": "^1.6.0"
     },
     "dependencies": {
-        "nedb": "^1.6.0"
+        "nedb": "^1.6.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "^2.1.8"
     }
 }

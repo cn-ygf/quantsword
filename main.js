@@ -6,12 +6,14 @@
 const { app, BrowserWindow } = require('electron')
 const ipc = require('electron').ipcMain
 const dialog = require('electron').dialog
+const pkg = require('./package.json')
 var Datastore = require('nedb')
 var path = require('path')
 var db = new Datastore({
     filename: path.join(app.getPath('userData'), 'quantsword.db'),
     autoload: true
 })
+
 
 // 主窗口对象
 let win
@@ -42,12 +44,20 @@ function createWindow() {
                 ismax: config.ismax
             }, function(err) {})
         }
-        win = new BrowserWindow({ width: config.width, height: config.height, frame: false, resizable: true, show: false })
-        win.loadFile(`${__dirname}/qs/window/index.html`)
+        win = new BrowserWindow({ width: config.width, height: config.height, frame: false, resizable: true, show: false,webPreferences:{
+            javascript:true,
+            plugins:true,
+            nodeIntegration:false,
+            webSecurity:false,
+            preload: path.join(__dirname, './public/renderer.js')
+        }})
         win.setBackgroundColor('#1E1E1E')
         win.setTitle('QuantSword by YGF')
-        win.setIcon(`${__dirname}/qs/window/logo.png`)
-        win.setOverlayIcon(`${__dirname}/qs/window/logo.png`, 'Description for overlay')
+        if (pkg.DEV) {
+            win.loadURL('http://localhost:3000/')
+        } else {
+            win.loadFile(`${__dirname}/build/index.html`)
+        }
         win.on('ready-to-show', () => {
             if (config.ismax) {
                 win.maximize()
@@ -147,7 +157,6 @@ function save_config_exit() {
         size[0] = 900
         size[1] = 500
     }
-    console.log(size)
     db.update({ key: 'config' }, {
         $set: {
             width: size[0],

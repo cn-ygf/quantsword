@@ -1,9 +1,6 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) YGF. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-.titlebar {
+.TitleBar {
+    -webkit-app-region: drag;
+    width: 100%;
     position: absolute;
     padding: 0;
     line-height: 30px;
@@ -17,7 +14,7 @@
     display: flex;
 }
 
-.titlebar .window-appicon {
+.TitleBar .Icon{
     width: 35px;
     height: 100%;
     position: relative;
@@ -29,7 +26,7 @@
     flex-shrink: 0;
 }
 
-.titlebar .window-title {
+.TitleBar .Title{
     flex: 0 1 auto;
     font-size: 12px;
     overflow: hidden;
