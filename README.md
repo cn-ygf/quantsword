@@ -12,15 +12,16 @@ QuantSword
 
     git clone https://github.com/cn-ygf/quantsword
     cd quantsword
-    cnpm install
+    yarn install
+    yarn build
 
 运行
 
-    cnpm start
+    yarn estart
 
 打包
 
-    cnpm run build
+    yarn build-prd
 
 二进制下载
 
