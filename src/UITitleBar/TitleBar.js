@@ -77,7 +77,7 @@ class UITitleBar extends Component {
         return (
             <div className="TitleBar" style={style}>
                 <div className="Icon"></div>
-                {<UIMenuBar opts={menuOptions}/>}
+                {<UIMenuBar />}
                 <div className="Title">{this.props.title}</div>
             </div>
         );

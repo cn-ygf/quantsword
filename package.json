@@ -3,7 +3,7 @@
     "version": "1.0.1",
     "main": "main.js",
     "description": "a web server manager",
-    "DEV": false,
+    "DEV": true,
     "license": "ISC",
     "author": {
         "name": "YGF",
@@ -36,12 +36,12 @@
         "babel-plugin-import": "^1.11.0",
         "electron": "^4.1.4",
         "electron-packager": "^13.1.1",
-        "nedb": "^1.6.0"
-    },
-    "dependencies": {
         "nedb": "^1.6.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-scripts": "^2.1.8"
+    },
+    "dependencies": {
+        "nedb": "^1.6.0"
     }
 }
